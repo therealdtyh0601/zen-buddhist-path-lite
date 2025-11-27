@@ -69,12 +69,20 @@
         <div id="sharecard-preview">
             <canvas id="shareCanvas" width="800" height="1000"></canvas>
         </div>
-
-        <!-- Share Buttons -->
+        
+                 <!-- Share Buttons (Icons Only) -->
         <div class="share-buttons">
-            <button onclick="shareFacebook()" data-i18n="share_fb">分享到 Facebook</button>
-            <button onclick="shareWhatsApp()" data-i18n="share_wa">分享到 WhatsApp</button>
-            <button onclick="saveImage()" data-i18n="save_img">保存圖片</button>
+            <button class="icon-btn" onclick="shareFacebook()">
+                <img src="assets/facebook.png" alt="Facebook" />
+            </button>
+        
+            <button class="icon-btn" onclick="shareWhatsApp()">
+                <img src="assets/whatsapp.png" alt="WhatsApp" />
+            </button>
+        
+            <button class="icon-btn" onclick="saveImage()">
+                <img src="assets/save.png" alt="Save" />
+            </button>
         </div>
 
         <!-- WhatsApp CTA -->
