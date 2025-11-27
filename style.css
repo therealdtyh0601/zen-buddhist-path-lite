@@ -1,0 +1,301 @@
+/* ---------------------------------------------------
+   Zen Buddhist Path Lite — Global Styles
+--------------------------------------------------- */
+
+:root {
+    --bg-main: #F8F6F3;          /* 米白 */
+    --bg-secondary: #E7ECEF;     /* 淺霧藍灰 */
+    --text-main: #444444;        /* 字體深灰 */
+    --text-light: #657A9D;       /* 霧藍強調色 */
+    --text-muted: #888888;
+    --border-soft: #DDDDDD;
+    --btn-bg: #657A9D;
+    --btn-text: #FFFFFF;
+    --radius: 14px;
+    --font-main: "Inter", "Noto Sans", sans-serif;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-main);
+    font-family: var(--font-main);
+    color: var(--text-main);
+    padding-bottom: 80px; /* safe area for mobile */
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-light);
+}
+
+button {
+    font-family: var(--font-main);
+    cursor: pointer;
+}
+
+/* ---------------------------------------------------
+   Language Toggle
+--------------------------------------------------- */
+#lang-toggle {
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 2000;
+    display: flex;
+    gap: 6px;
+}
+
+#lang-toggle button {
+    background: var(--bg-secondary);
+    color: var(--text-main);
+    border: 1px solid var(--border-soft);
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ---------------------------------------------------
+   Consent Modal
+--------------------------------------------------- */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3000;
+}
+
+.modal-card {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 30px 26px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-card h2 {
+    font-size: 26px;
+    color: var(--text-light);
+    margin-bottom: 18px;
+}
+
+.modal-card p {
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 26px;
+}
+
+#agree-btn {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 12px 26px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+}
+
+.modal-links {
+    margin-top: 16px;
+    font-size: 15px;
+}
+
+/* ---------------------------------------------------
+   Main Container
+--------------------------------------------------- */
+
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-light);
+    margin: 30px 0 20px;
+}
+
+/* ---------------------------------------------------
+   Input Section
+--------------------------------------------------- */
+
+#input-section {
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+#input-section label {
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+#input-section input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border-soft);
+    background: var(--bg-secondary);
+}
+
+#generate-btn {
+    margin-top: 10px;
+    padding: 14px;
+    font-size: 17px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------
+   Result Section
+--------------------------------------------------- */
+#result-section {
+    margin-top: 30px;
+    background: #FFFFFF;
+    padding: 24px;
+    border-radius: var(--radius);
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.06);
+}
+
+#result-section h2 {
+    font-size: 24px;
+    color: var(--text-light);
+    margin-bottom: 14px;
+}
+
+#result-text {
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--text-main);
+    margin-bottom: 20px;
+}
+
+/* ---------------------------------------------------
+   Share Card Preview
+--------------------------------------------------- */
+#sharecard-preview {
+    background: var(--bg-secondary);
+    padding: 14px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#shareCanvas {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* ---------------------------------------------------
+   Share Buttons
+--------------------------------------------------- */
+.share-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.share-buttons button {
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    padding: 12px 16px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+/* ---------------------------------------------------
+   CTA Box
+--------------------------------------------------- */
+#cta-box {
+    background: #FFFFFF;
+    border: 1px solid var(--border-soft);
+    padding: 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#cta-box p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: var(--text-main);
+}
+
+#cta-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: var(--btn-bg);
+    color: var(--btn-text);
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------
+   Ad Box
+--------------------------------------------------- */
+.ad-box {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+   Footer
+--------------------------------------------------- */
+footer {
+    position: relative;
+    margin-top: 30px;
+    text-align: center;
+    padding: 20px 0;
+    color: var(--text-muted);
+    font-size: 14px;
+}
+
+footer a {
+    color: var(--text-light);
+}
+
+/* ---------------------------------------------------
+   Mobile Tweaks
+--------------------------------------------------- */
+@media (max-width: 480px) {
+
+    .title {
+        font-size: 24px;
+    }
+
+    #input-section,
+    #result-section {
+        padding: 18px;
+    }
+
+    #shareCanvas {
+        border-radius: 8px;
+    }
+
+    .share-buttons button {
+        font-size: 15px;
+    }
+}
