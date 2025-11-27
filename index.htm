@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zen Buddhist Path Lite</title>
+
+    <!-- AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9188806824600550"
+     crossorigin="anonymous"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div id="lang-toggle">
+    <button onclick="setLanguage('zh')">中</button>
+    <button onclick="setLanguage('en')">EN</button>
+</div>
+
+<!-- Consent Modal -->
+<div id="consent-modal" class="modal-overlay">
+    <div class="modal-card">
+        <h2 data-i18n="consent_title">歡迎使用 Zen Buddhist Path Lite</h2>
+        <p data-i18n="consent_body">
+            在開始之前，請閱讀並同意以下內容：本網站是一個免費、自我反思、
+            心理導向的工具，不構成醫療、宗教、命理或任何形式的專業建議。
+            本網站不儲存您的資料，所有計算均在你的裝置上完成。
+            使用本網站即表示您同意免責聲明與隱私條款。
+        </p>
+        <button id="agree-btn" data-i18n="consent_btn">我同意並開始使用</button>
+
+        <div class="modal-links">
+            <a href="terms.html" data-i18n="consent_terms">使用條款</a> · 
+            <a href="privacy.html" data-i18n="consent_privacy">隱私政策</a> · 
+            <a href="disclaimer.html" data-i18n="consent_disclaimer">免責聲明</a>
+        </div>
+    </div>
+</div>
+
+<!-- Main Container -->
+<div class="container">
+
+    <h1 class="title" data-i18n="app_title">Zen Buddhist Path Lite</h1>
+
+    <!-- Input Form -->
+    <div id="input-section">
+        <label data-i18n="birth_label">出生日期</label>
+        <input id="birthdate" type="date" />
+
+        <label data-i18n="time_label">出生時間</label>
+        <input id="birthtime" type="time" />
+
+        <button id="generate-btn" onclick="generateResult()" data-i18n="generate_btn">
+            生成我的修行方向
+        </button>
+    </div>
+
+    <!-- Result Section -->
+    <div id="result-section" style="display:none;">
+        
+        <h2 data-i18n="result_title">你的禪修風格建議</h2>
+        <p id="result-text"></p>
+
+        <!-- Share Card Preview -->
+        <div id="sharecard-preview">
+            <canvas id="shareCanvas" width="800" height="1000"></canvas>
+        </div>
+
+        <!-- Share Buttons -->
+        <div class="share-buttons">
+            <button onclick="shareFacebook()" data-i18n="share_fb">分享到 Facebook</button>
+            <button onclick="shareWhatsApp()" data-i18n="share_wa">分享到 WhatsApp</button>
+            <button onclick="saveImage()" data-i18n="save_img">保存圖片</button>
+        </div>
+
+        <!-- WhatsApp CTA -->
+        <div id="cta-box">
+            <p data-i18n="cta_text">
+                如果你想更完整地理解你的能量與修行方向，
+                你可以選擇透過 WhatsApp 與我們聊聊。（可選）
+            </p>
+            <a id="cta-btn" 
+               href="https://wa.me/60123456789"
+               target="_blank"
+               data-i18n="cta_btn">
+               WhatsApp 諮詢我
+            </a>
+        </div>
+
+        <!-- AdSense Unit -->
+        <div class="ad-box">
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-9188806824600550"
+                data-ad-slot="1234567890"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+
+</div>
+
+<!-- Legal Footer -->
+<footer>
+    © 2025 Zen Buddhist Path Lite |
+    <a href="terms.html" data-i18n="footer_terms">使用條款</a> |
+    <a href="privacy.html" data-i18n="footer_privacy">隱私政策</a> |
+    <a href="disclaimer.html" data-i18n="footer_disclaimer">免責聲明</a>
+</footer>
+
+<script src="app.js"></script>
+
+</body>
+</html>
