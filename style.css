@@ -299,3 +299,32 @@ footer a {
         font-size: 15px;
     }
 }
+/* Icon Buttons */
+.icon-btn {
+    background: #FFFFFF;
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius);
+    padding: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.icon-btn:hover {
+    background: #f5f7fa;
+}
+
+.icon-btn img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+<button class="icon-btn small">
+    <img src="assets/next.png" alt="Next" />
+</button>
+.icon-btn.small img {
+    width: 26px;
+    height: 26px;
+}
